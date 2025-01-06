@@ -9,7 +9,6 @@ class GermanLicensePlateServiceProvider extends ServiceProvider
 {
     public function boot()
     {
-        // Register the custom validation rule
         Validator::extend('german_license_plate', function ($attribute, $value, $parameters, $validator) {
             return preg_match('/^[A-ZÄÖÜ]{1,3}-[A-Z]{1,2}-[0-9]{1,4}$/', $value);
         });
@@ -21,6 +20,6 @@ class GermanLicensePlateServiceProvider extends ServiceProvider
 
     public function register()
     {
-
+        //
     }
 }
