@@ -1,0 +1,25 @@
+{
+    "name": "ikromjon1998/laravel-german-license-plate-validator",
+    "description": "A Laravel package that provides a custom validation rule to verify the format of German license plate numbers, ensuring compliance with standard German license plate conventions.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Ikromjon1998\\LaravelGermanLicensePlateValidator\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ikromjon",
+            "email": "57859849+Ikromjon1998@users.noreply.github.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "illuminate/support": "^10.0",
+        "php": ">=8.1"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.0"
+    }
+}
