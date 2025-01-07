@@ -1,0 +1,25 @@
+name: Run Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ^8.1
+          extensions: string, tokenizer, xml, intl
+      - name: Install Dependencies
+        run: composer install --no-progress --no-suggest --prefer-dist
+      - name: Run Tests
+        run: composer test

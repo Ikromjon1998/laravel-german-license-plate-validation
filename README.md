@@ -19,6 +19,16 @@ $request->validate([
 ]);
 ```
 
+## Configuration
+
+You can publish the configuration file to customize the regex or error messages:
+
+```bash
+php artisan vendor:publish --tag=config
+```
+
+The configuration file will be published to `config/license-plate.php`.
+
 ## Testing
 
 Run tests with PHPUnit:

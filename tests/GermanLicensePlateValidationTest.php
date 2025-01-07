@@ -2,9 +2,9 @@
 
 namespace Ikromjon1998\LaravelGermanLicensePlateValidator\Tests;
 
-use Orchestra\Testbench\TestCase;
-use Illuminate\Support\Facades\Validator;
 use Ikromjon1998\LaravelGermanLicensePlateValidator\GermanLicensePlateServiceProvider;
+use Illuminate\Support\Facades\Validator;
+use Orchestra\Testbench\TestCase;
 
 class GermanLicensePlateValidationTest extends TestCase
 {
