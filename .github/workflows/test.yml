@@ -8,6 +8,14 @@ on:
     branches:
       - main
 
+From the error logs in your screenshots and the workflow configuration, the issue seems to be with the shivammathur/setup-php@v2 action and the PHP version specified in your workflow file. The php-version: ^8.1 syntax may not be recognized correctly by the setup-php action.
+  Steps to Fix the Issue
+  1. Use a Specific PHP Version
+  
+  Instead of using ^8.1, specify an exact PHP version. The caret (^) is not a valid syntax for the php-version field in the shivammathur/setup-php action.
+
+Update your workflow file to:
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -17,9 +25,9 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: ^8.1
-          extensions: string, tokenizer, xml, intl
+          php-version: 8.1
+          extensions: tokenizer, xml, intl
       - name: Install Dependencies
-        run: composer install --no-progress --no-suggest --prefer-dist
+        run: composer install --no-progress --prefer-dist
       - name: Run Tests
         run: composer test
