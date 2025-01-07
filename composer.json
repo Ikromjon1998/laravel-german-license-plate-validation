@@ -1,5 +1,5 @@
 {
-    "version": "1.0.3",
+    "version": "1.0.4",
     "name": "ikromjon1998/laravel-german-license-plate-validator",
     "description": "A Laravel package that provides a custom validation rule to verify the format of German license plate numbers, ensuring compliance with standard German license plate conventions.",
     "type": "library",
