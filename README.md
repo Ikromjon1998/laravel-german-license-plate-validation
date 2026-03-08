@@ -35,3 +35,7 @@ Run tests with PHPUnit:
 ```bash
 vendor/bin/phpunit
 ```
+
+## Support
+
+For questions or issues, contact: ikromjon98.98@icloud.com
